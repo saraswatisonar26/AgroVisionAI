@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="detect-section">
+
+    <h2 class="detect-title">Detect Crop Diseases 🌿</h2>
+
+    <div class="detect-container">
+
+        <!-- Left Side -->
+
+        <div class="detect-info">
+
+            <h3>Why Use This System?</h3>
+
+            <p>
+                Our AI-powered crop disease detection system helps farmers
+                identify plant diseases quickly and accurately.
+            </p>
+
+            <ul>
+                <li>✅ AI Powered Detection</li>
+                <li>⚡ Fast Prediction</li>
+                <li>🎯 High Accuracy</li>
+                <li>🌱 Treatment Suggestions</li>
+            </ul>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="upload-card">
+
+            <div class="upload-icon">📷</div>
+
+            <h3>Upload Crop Leaf</h3>
+
+            <p>Select a clear image of the crop leaf.</p>
+
+            <form action="/predict" method="POST" enctype="multipart/form-data">
+
+<input
+type="file"
+id="image"
+name="image"
+accept="image/*">
+
+<label for="image" class="upload-btn">
+Browse Image
+</label>
+
+
+
+<button
+type="submit"
+class="analyze-btn">
+
+Analyze Disease
+
+</button>
+
+</form>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

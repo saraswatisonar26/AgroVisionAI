@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="result-section">
+
+    
+    <div class="result-card">
+
+        <div class="result-icon">
+           Crop Disease Detection Result 🌿
+        </div>
+        <div class="uploaded-image">
+
+    <img
+        src="{{ url_for('static', filename=uploaded_image) }}"
+        alt="Uploaded Crop Image">
+
+</div>
+
+        <h3 class="disease-name">
+            Early Blight
+        </h3>
+
+        <p class="accuracy">
+            Prediction Accuracy : <strong>98.45%</strong>
+        </p>
+
+        <hr>
+
+        <div class="result-content">
+
+            <div class="result-box">
+
+                <h4>Symptoms</h4>
+
+                <ul>
+                    <li>Yellow spots on leaves</li>
+                    <li>Brown circular lesions</li>
+                    <li>Dry and damaged leaf edges</li>
+                </ul>
+
+            </div>
+
+            <div class="result-box">
+
+                <h4>Recommended Treatment</h4>
+
+                <ul>
+                    <li>Apply Mancozeb fungicide.</li>
+                    <li>Remove infected leaves.</li>
+                    <li>Avoid excess watering.</li>
+                </ul>
+
+            </div>
+
+            <div class="result-box">
+
+                <h4>Prevention</h4>
+
+                <ul>
+                    <li>Use disease-free seeds.</li>
+                    <li>Maintain proper crop spacing.</li>
+                    <li>Inspect crops regularly.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <a href="/detect" class="detect-again-btn">
+            Detect Another Image
+        </a>
+
+    </div>
+
+    
+</section>
+
+{% endblock %}

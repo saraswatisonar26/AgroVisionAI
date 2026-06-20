@@ -1,14 +1,366 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroVision AI</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-    <h1>Welcome to AgroVision AI 🌿</h1>
-    <h2>AI Based Crop Disease Detection Dashboard</h2>
+{% block title %}Home | AgroVision AI{% endblock %}
 
-</body>
-</html>
+{% block content %}
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <h1>
+                     Protect Your Crops
+                    <br>
+                    <span>with Artificial Intelligence</span>
+                </h1>
+
+                <p>
+                    Detect crop diseases in seconds by uploading a leaf image.
+                    Get AI-powered predictions, disease information, treatment
+                    recommendations, and preventive measures through an
+                    easy-to-use dashboard.
+                </p>
+
+                <a href="/detect" class="btn hero-btn">
+                    Detect Disease
+                </a>
+
+                <a href="/dashboard" class="btn hero-btn-outline">
+                    View Dashboard
+                </a>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <img
+                    src="{{ url_for('static', filename='images/hero.png') }}"
+                    class="hero-image"
+                    alt="Crop AI">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="features">
+
+    <div class="container">
+
+        <div class="stats-heading text-center mb-5">
+
+            <h2>Why Choose AgroVision AI?</h2>
+
+            <p>
+                Smart technology designed to help farmers detect crop diseases
+                quickly and accurately.
+            </p>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🌿</div>
+
+                    <h4>Fast Detection</h4>
+
+                    <p>
+                        Upload a crop image and receive disease predictions
+                        within seconds.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🎯</div>
+
+                    <h4>High Accuracy</h4>
+
+                    <p>
+                        AI model trained to identify multiple crop diseases
+                        with high confidence.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🛡️</div>
+
+                    <h4>Treatment Advice</h4>
+
+                    <p>
+                        Get recommended treatments and preventive measures.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<div class="section-title text-center">
+
+    <h2>Empowering Farmers Every Day</h2>
+
+    <p>
+        Our intelligent system helps farmers detect crop diseases quickly,improve crop health, and make better farming decisions using AI.
+    </p>
+
+</div>
+<section class="stats">
+
+    <div class="container">
+
+        <div class="row text-center">
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat-card">
+
+    <div class="stat-icon">
+        🎯
+    </div>
+
+    <h2>98%</h2>
+
+    <p>Prediction Accuracy</p>
+
+</div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        🌾
+                    </div>
+                    <h2>25+</h2>
+
+                    <p>Crop Diseases</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📷
+                    </div>
+
+                    <h2>500+</h2>
+
+                    <p>Predictions</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🕒
+                    </div>
+
+                    <h2>24/7</h2>
+
+                    <p>AI Support</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="process">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>How AgroVision AI Works</h2>
+
+            <p>
+                Experience AI-powered crop disease detection in three simple steps.
+            </p>
+
+        </div>
+
+        <div class="row text-center">
+
+            <div class="col-md-4">
+
+                <div class="process-card">
+
+                    <div class="process-icon">
+                        <i class="bi bi-cloud-arrow-up-fill"></i>
+                    </div>
+
+                    <h4>Upload Image</h4>
+
+                    <p>
+                        Upload a clear image of the affected crop leaf.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="process-card">
+
+                    <div class="process-icon">
+                        <i class="bi bi-cpu-fill"></i>
+                    </div>
+
+                    <h4>AI Analysis</h4>
+
+                    <p>
+                        Our trained AI model analyzes the uploaded image.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="process-card">
+
+                    <div class="process-icon">
+                        <i class="bi bi-file-earmark-medical-fill"></i>
+                    </div>
+
+                    <h4>Get Results</h4>
+
+                    <p>
+                        View the disease name, confidence score, and treatment suggestions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo & About -->
+
+        <div class="footer-box">
+
+            <h2>🌿AgroVision AI</h2>
+
+            <p>
+                Empowering farmers with AI-powered crop disease detection,
+                smart insights, and sustainable farming solutions.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="/">Home</a></li>
+
+                <li><a href="/about">About</a></li>
+
+                <li><a href="/detect">Detect Disease</a></li>
+
+                <li><a href="/dashboard">Dashboard</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Services -->
+
+        <div class="footer-box">
+
+            <h3>Services</h3>
+
+            <ul>
+
+                <li>AI Disease Detection</li>
+
+                <li>Crop Monitoring</li>
+
+                <li>Instant Prediction</li>
+
+                <li>Smart Recommendations</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="footer-box">
+
+            <h3>Contact</h3>
+
+            <p>📧 support@agrovision.ai</p>
+
+            <p>📞 +91 8888902490</p>
+
+            <p>📍 Nashik, Maharashtra</p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 AgroVision AI. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+{% endblock %}
