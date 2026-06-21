@@ -18,39 +18,38 @@
 
 </div>
 
-        <h3 class="disease-name">
-            Early Blight
-        </h3>
+<h3 class="disease-name">
+    {{ disease }}
+</h3>
 
-        <p class="accuracy">
-            Prediction Accuracy : <strong>98.45%</strong>
-        </p>
-
+<p class="accuracy">
+    Prediction Accuracy :
+    <strong>{{ confidence }}%</strong>
+</p>
         <hr>
 
         <div class="result-content">
 
-            <div class="result-box">
+           <div class="result-box">
 
-                <h4>Symptoms</h4>
+            <h4>Symptoms</h4>
 
-                <ul>
-                    <li>Yellow spots on leaves</li>
-                    <li>Brown circular lesions</li>
-                    <li>Dry and damaged leaf edges</li>
-                </ul>
+            <ul>
+                {% for item in info.symptoms %}
+                 <li>{{ item }}</li>
+                 {% endfor %}
+            </ul>
 
-            </div>
+</div>
 
             <div class="result-box">
 
                 <h4>Recommended Treatment</h4>
-
-                <ul>
-                    <li>Apply Mancozeb fungicide.</li>
-                    <li>Remove infected leaves.</li>
-                    <li>Avoid excess watering.</li>
-                </ul>
+<ul>
+    {% for item in info.treatment %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
 
             </div>
 
@@ -59,10 +58,10 @@
                 <h4>Prevention</h4>
 
                 <ul>
-                    <li>Use disease-free seeds.</li>
-                    <li>Maintain proper crop spacing.</li>
-                    <li>Inspect crops regularly.</li>
-                </ul>
+    {% for item in info.prevention %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
 
             </div>
 
